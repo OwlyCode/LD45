@@ -38,9 +38,9 @@ public class Mixer : MonoBehaviour
 
         if (ingredients.Count == 2)
         {
-            ingredients[0].GetComponent<Rock>().Shake();
+            ingredients[0].GetComponent<DraggableItem>().Shake();
             ingredients[0].layer = LayerMask.NameToLayer("Reactant");
-            ingredients[1].GetComponent<Rock>().Shake();
+            ingredients[1].GetComponent<DraggableItem>().Shake();
             ingredients[1].layer = LayerMask.NameToLayer("Reactant");
             processing = true;
             StartCoroutine(Process());

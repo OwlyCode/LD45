@@ -8,13 +8,6 @@ public class Hero : MonoBehaviour
 
     GameObject carried = null;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow))
@@ -55,7 +48,7 @@ public class Hero : MonoBehaviour
     void DropItem()
     {
         carried.transform.parent = null;
-        carried.GetComponent<Rock>().Drop(transform.Find("hero").transform.position);
+        carried.GetComponent<DraggableItem>().Drop(transform.Find("hero").transform.position);
         carried.layer = LayerMask.NameToLayer("Droppable");
         carried.GetComponent<Depth>().parentBased = false;
         carried.GetComponent<Depth>().depthOffset = 0f;
