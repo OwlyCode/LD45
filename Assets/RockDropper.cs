@@ -26,7 +26,6 @@ public class RockDropper : MonoBehaviour
         if (insideSpawn)
         {
             Vector2 rockTarget = Random.insideUnitCircle * 4;
-            Debug.Log(Vector2.Distance(rockTarget, transform.position));
 
             while (Vector2.Distance(rockTarget, transform.position) < 1f)
             {
@@ -35,8 +34,6 @@ public class RockDropper : MonoBehaviour
 
             GameObject rockInstance = Instantiate(rock, rockTarget + new Vector2(0, 15f), Quaternion.identity);
             rockInstance.GetComponent<Rock>().Drop(rockTarget, true);
-
-            Debug.Log("A rock falls");
         }
     }
 }

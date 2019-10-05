@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 319128425}
   - component: {fileID: 319128426}
   - component: {fileID: 319128427}
+  - component: {fileID: 319128428}
   m_Layer: 0
   m_Name: Spawn
   m_TagString: Untagged
@@ -515,6 +516,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rock: {fileID: 1533628786475138239, guid: 9be57230a538d8b40b1186249f1e02f5, type: 3}
+--- !u!114 &319128428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319128424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32751c73cff25084bb4d856935212e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

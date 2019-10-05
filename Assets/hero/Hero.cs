@@ -56,6 +56,7 @@ public class Hero : MonoBehaviour
     {
         carried.transform.parent = null;
         carried.GetComponent<Rock>().Drop(transform.Find("hero").transform.position);
+        carried.layer = LayerMask.NameToLayer("Droppable");
         carried.GetComponent<Depth>().parentBased = false;
         carried.GetComponent<Depth>().depthOffset = 0f;
         carried = null;
@@ -77,11 +78,14 @@ public class Hero : MonoBehaviour
             {
                 found = true;
                 carried = colliders[i].gameObject;
+                carried.layer = LayerMask.NameToLayer("Dragged");
                 carried.transform.parent = transform;
                 carried.transform.position = transform.position + new Vector3(0f, 0.098f);
                 carried.GetComponent<Depth>().parentBased = true;
                 carried.GetComponent<Depth>().depthOffset = -0.1f;
             }
+
+            i++;
         }
     }
 }

@@ -33,4 +33,22 @@ public class Rock : MonoBehaviour
             dropped = true;
         }
     }
+
+    public void Shake()
+    {
+        StartCoroutine(DoShake());
+    }
+
+    IEnumerator DoShake()
+    {
+        transform.Rotate(0f, 0f, -8f);
+
+        while (true)
+        {
+            yield return new WaitForSeconds(0.1f);
+            transform.Rotate(0f, 0f, 16f);
+            yield return new WaitForSeconds(0.1f);
+            transform.Rotate(0f, 0f, -16f);
+        }
+    }
 }
