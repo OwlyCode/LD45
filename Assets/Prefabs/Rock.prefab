@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 389708856563318564}
   - component: {fileID: 7459964133796665885}
   - component: {fileID: 5366653245476124510}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   depthOffset: 0
   target: {fileID: 0}
+  parentBased: 0
 --- !u!114 &7459964133796665885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fcb26410a06264081f7ef7f60e12aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {x: 0, y: 0, z: 0}
 --- !u!58 &5366653245476124510
 CircleCollider2D:
   m_ObjectHideFlags: 0

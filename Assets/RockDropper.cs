@@ -34,7 +34,7 @@ public class RockDropper : MonoBehaviour
             }
 
             GameObject rockInstance = Instantiate(rock, rockTarget + new Vector2(0, 15f), Quaternion.identity);
-            rockInstance.GetComponent<Rock>().target = rockTarget;
+            rockInstance.GetComponent<Rock>().Drop(rockTarget, true);
 
             Debug.Log("A rock falls");
         }

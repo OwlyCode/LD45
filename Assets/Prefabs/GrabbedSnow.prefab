@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 225679911609602204}
   - component: {fileID: 225679911609602205}
-  m_Layer: 0
+  - component: {fileID: 6871187445886258679}
+  m_Layer: 8
   m_Name: GrabbedSnow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &6871187445886258679
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225679911609602206}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.016227365, y: 0.97366875}
+  serializedVersion: 2
+  m_Radius: 1.1550001

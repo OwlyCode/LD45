@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Rock : MonoBehaviour
 {
-    public Vector3 target;
-    bool dropped = false;
+    Vector3 target;
+    bool dropped = true;
+    bool puff = false;
 
-    // Start is called before the first frame update
-    void Start()
+    public void Drop(Vector2 target, bool puff = false)
     {
-            
+        this.target = target;
+        dropped = false;
+        this.puff = puff;
     }
 
     // Update is called once per frame
@@ -23,7 +25,7 @@ public class Rock : MonoBehaviour
 
         if (transform.position == target)
         {
-            if (dropped == false)
+            if (dropped == false && puff == true)
             {
                 GameObject.Find("Global").GetComponent<GlobalLogic>().Puff(transform.position, 0.5f);
             }

@@ -217,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   depthOffset: 0
   target: {fileID: 0}
+  parentBased: 0
 --- !u!1 &154205219
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,6 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   depthOffset: 0
   target: {fileID: 0}
+  parentBased: 0
 --- !u!1 &181441775
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,6 +425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   depthOffset: 0
   target: {fileID: 0}
+  parentBased: 0
 --- !u!1 &319128424
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   depthOffset: 0
   target: {fileID: 0}
+  parentBased: 0
 --- !u!1 &1270397539
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,6 +999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   depthOffset: 0
   target: {fileID: 0}
+  parentBased: 0
 --- !u!1 &1565091513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,6 +1097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   depthOffset: 0
   target: {fileID: 0}
+  parentBased: 0
 --- !u!1 &1639090875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,6 +1195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   depthOffset: 0
   target: {fileID: 0}
+  parentBased: 0
 --- !u!1 &1973440589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,6 +1293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   depthOffset: 0
   target: {fileID: 0}
+  parentBased: 0
 --- !u!1 &2090045387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,3 +1391,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   depthOffset: 0
   target: {fileID: 0}
+  parentBased: 0
