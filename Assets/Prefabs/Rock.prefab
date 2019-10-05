@@ -10,8 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1533628786475138237}
   - component: {fileID: 1533628786475138236}
+  - component: {fileID: 389708856563318564}
+  - component: {fileID: 7459964133796665885}
+  - component: {fileID: 5366653245476124510}
   m_Layer: 0
-  m_Name: elements_1
+  m_Name: Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533628786475138239}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7544084, y: -1.805201, z: 0}
+  m_LocalPosition: {x: -2.7544084, y: -1.805201, z: -1.805201}
   m_LocalScale: {x: 0.14544, y: 0.14544, z: 0.14544}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,3 +85,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &389708856563318564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533628786475138239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7794fb8a9a6ff48861a7f0ec76d1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depthOffset: 0
+  target: {fileID: 0}
+--- !u!114 &7459964133796665885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533628786475138239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fcb26410a06264081f7ef7f60e12aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {x: 0, y: 0, z: 0}
+--- !u!58 &5366653245476124510
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533628786475138239}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.016228676, y: 0.941214}
+  serializedVersion: 2
+  m_Radius: 1.1550001

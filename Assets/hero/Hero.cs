@@ -34,6 +34,8 @@ public class Hero : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             transform.Find("hero").gameObject.GetComponent<Animator>().SetTrigger("jump");
+
+            GameObject.Find("Spawn").GetComponent<RockDropper>().Jump();
         }
     }
 }
