@@ -89,7 +89,7 @@ public class Hero : MonoBehaviour
 
         while (i < colliders.Count && !found)
         {
-            if (colliders[i].gameObject.layer == LayerMask.NameToLayer("Ground"))
+            if (colliders[i].gameObject.layer == LayerMask.NameToLayer("Ground") || colliders[i].gameObject.layer == LayerMask.NameToLayer("Water"))
             {
                 Instantiate(dirt, transform.position, Quaternion.identity);
                 PickItem();

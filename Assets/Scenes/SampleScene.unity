@@ -363,6 +363,7 @@ Transform:
   m_Children:
   - {fileID: 1078338691}
   - {fileID: 519420032}
+  - {fileID: 243238313}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -428,6 +429,12 @@ MonoBehaviour:
   depthOffset: 0
   target: {fileID: 0}
   parentBased: 0
+--- !u!4 &243238313 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5236815450548891942, guid: 0c847a9faf8a1d941b8216d76ac0e9eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 5236815451151645417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &319128424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,6 +1176,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lake (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8179976584225464622, guid: 0defa9112dbed6d4ab28b53501118def,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 96970122723077230, guid: 0defa9112dbed6d4ab28b53501118def,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1692,27 +1704,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 181441777}
     m_Modifications:
-    - target: {fileID: 5236815450548891941, guid: 0c847a9faf8a1d941b8216d76ac0e9eb,
-        type: 3}
-      propertyPath: m_Name
-      value: Rain
-      objectReference: {fileID: 0}
     - target: {fileID: 5236815450548891942, guid: 0c847a9faf8a1d941b8216d76ac0e9eb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.45
+      value: 6.323
       objectReference: {fileID: 0}
     - target: {fileID: 5236815450548891942, guid: 0c847a9faf8a1d941b8216d76ac0e9eb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.17
+      value: 16.402
       objectReference: {fileID: 0}
     - target: {fileID: 5236815450548891942, guid: 0c847a9faf8a1d941b8216d76ac0e9eb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.37
+      value: -8.138
       objectReference: {fileID: 0}
     - target: {fileID: 5236815450548891942, guid: 0c847a9faf8a1d941b8216d76ac0e9eb,
         type: 3}
@@ -1722,12 +1729,12 @@ PrefabInstance:
     - target: {fileID: 5236815450548891942, guid: 0c847a9faf8a1d941b8216d76ac0e9eb,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5236815450548891942, guid: 0c847a9faf8a1d941b8216d76ac0e9eb,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5236815450548891942, guid: 0c847a9faf8a1d941b8216d76ac0e9eb,
         type: 3}
@@ -1737,7 +1744,7 @@ PrefabInstance:
     - target: {fileID: 5236815450548891942, guid: 0c847a9faf8a1d941b8216d76ac0e9eb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5236815450548891942, guid: 0c847a9faf8a1d941b8216d76ac0e9eb,
         type: 3}
@@ -1753,6 +1760,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5236815450548891941, guid: 0c847a9faf8a1d941b8216d76ac0e9eb,
+        type: 3}
+      propertyPath: m_Name
+      value: Rain
       objectReference: {fileID: 0}
     - target: {fileID: 5236815450548891943, guid: 0c847a9faf8a1d941b8216d76ac0e9eb,
         type: 3}

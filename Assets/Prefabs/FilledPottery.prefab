@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4966841773367885142}
   - component: {fileID: 491257893269347617}
   - component: {fileID: 6021083374244107412}
+  - component: {fileID: 369027817648418871}
+  - component: {fileID: 1531905940706223471}
   m_Layer: 8
   m_Name: FilledPottery
   m_TagString: Untagged
@@ -28,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633583790854948228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: -2.31, z: -2.31}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1694415, y: 0.1694415, z: 0.1694415}
   m_Children: []
   m_Father: {fileID: 0}
@@ -129,3 +131,38 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.07, y: 2.77}
   m_Direction: 0
+--- !u!95 &369027817648418871
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633583790854948228}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 08826a722e1dc074d820a52265d89082, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1531905940706223471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633583790854948228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282dc7cc6743a2644a81b98322e59cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filledSprite: {fileID: -6123155731546979588, guid: 1ad7f5a8e57fcfe4e82bf7b821e8cdbd,
+    type: 3}
+  droppedSprite: {fileID: -830853010422553840, guid: 1ad7f5a8e57fcfe4e82bf7b821e8cdbd,
+    type: 3}

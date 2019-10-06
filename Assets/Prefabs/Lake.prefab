@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 96970122723077230}
   - component: {fileID: 5695562667356762127}
   - component: {fileID: -5137393427103551189}
-  m_Layer: 0
+  - component: {fileID: 8504879743710154828}
+  m_Layer: 4
   m_Name: Lake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,3 +96,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12cb820c9bcd50a468340fb54d50164f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &8504879743710154828
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179976584225464622}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.022157822, y: -0.004175732}
+  m_Size: {x: 1.8379121, y: 0.8785114}
+  m_Direction: 1
