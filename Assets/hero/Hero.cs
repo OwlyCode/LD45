@@ -19,22 +19,22 @@ public class Hero : MonoBehaviour
         GetComponent<Animator>().SetBool("moving", false);
         GetComponent<Animator>().SetBool("grabbing", carried != null);
 
-        if (Input.GetKey(KeyCode.UpArrow) && GlobalLogic.jumpDiscovered)
+        if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && GlobalLogic.jumpDiscovered)
         {
             transform.position = transform.position + Vector3.up * speed * Time.deltaTime;
             GetComponent<Animator>().SetBool("moving", true);
         }
-        if (Input.GetKey(KeyCode.DownArrow) && GlobalLogic.jumpDiscovered)
+        if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && GlobalLogic.jumpDiscovered)
         {
             transform.position = transform.position + Vector3.down * speed * Time.deltaTime;
             GetComponent<Animator>().SetBool("moving", true);
         }
-        if (Input.GetKey(KeyCode.LeftArrow) && GlobalLogic.jumpDiscovered)
+        if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) && GlobalLogic.jumpDiscovered)
         {
             transform.position = transform.position + Vector3.left * speed * Time.deltaTime;
             GetComponent<Animator>().SetBool("moving", true);
         }
-        if (Input.GetKey(KeyCode.RightArrow) && GlobalLogic.jumpDiscovered)
+        if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) && GlobalLogic.jumpDiscovered)
         {
             transform.position = transform.position + Vector3.right * speed * Time.deltaTime;
             GetComponent<Animator>().SetBool("moving", true);
@@ -48,7 +48,7 @@ public class Hero : MonoBehaviour
 
             StartCoroutine(DoJump());
         }
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (carried)
             {

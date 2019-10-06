@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Tutorial : MonoBehaviour
 {
     int stage;
-    const float TEXT_DELAY = 5f;
+    const float TEXT_DELAY = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class Tutorial : MonoBehaviour
                 }
                 break;
             case 1:
-                SetText("Oh, it caused a rock to crash. I wonder what happens if you drag two of them in here. Use X to pick up an item.");
+                SetText("Oh, it caused a rock to crash. I wonder what happens if you drag two of them in here. Use E to pick up an item.");
                 if (GlobalLogic.fireDiscovered)
                 {
                     stage++;

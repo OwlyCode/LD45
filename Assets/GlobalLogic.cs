@@ -75,7 +75,7 @@ public class GlobalLogic : MonoBehaviour
         Destroy(instance, instance.GetComponent<ParticleSystem>().main.duration);
     }
 
-    public void Rain(float duration = 15f)
+    public void Rain(float duration = 30f)
     {
         StartCoroutine(DoRain(duration));
     }
