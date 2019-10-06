@@ -16,25 +16,32 @@ public class Hero : MonoBehaviour
 
     void Update()
     {
+        GetComponent<Animator>().SetBool("moving", false);
+        GetComponent<Animator>().SetBool("grabbing", carried != null);
+
         if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.position = transform.position + Vector3.up * speed * Time.deltaTime;
+            GetComponent<Animator>().SetBool("moving", true);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.position = transform.position + Vector3.down * speed * Time.deltaTime;
+            GetComponent<Animator>().SetBool("moving", true);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position = transform.position + Vector3.left * speed * Time.deltaTime;
+            GetComponent<Animator>().SetBool("moving", true);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.position = transform.position + Vector3.right * speed * Time.deltaTime;
+            GetComponent<Animator>().SetBool("moving", true);
         }
         if (Input.GetKeyDown(KeyCode.Space) && !carried)
         {
-            transform.Find("hero").gameObject.GetComponent<Animator>().SetTrigger("jump");
+            GetComponent<Animator>().SetTrigger("jump");
 
             GameObject.Find("Spawn").GetComponent<RockDropper>().Jump();
 
@@ -65,7 +72,7 @@ public class Hero : MonoBehaviour
     void DropItem()
     {
         carried.transform.parent = null;
-        carried.GetComponent<DraggableItem>().Drop(transform.Find("hero").transform.position);
+        carried.GetComponent<DraggableItem>().Drop(transform.Find("Body").transform.position + Vector3.down * 0.3f);
         carried.layer = LayerMask.NameToLayer("Droppable");
         carried.GetComponent<Depth>().parentBased = false;
         carried.GetComponent<Depth>().depthOffset = 0f;
