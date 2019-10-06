@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chick : MonoBehaviour
+public class Chicken : MonoBehaviour
 {
-    const float MOVE_SPEED = 1f;
+    const float MOVE_SPEED = 0.5f;
     const float MOVE_RADIUS = 0.5f;
     const int NEEDED_SEEDS = 3;
 
@@ -13,15 +13,14 @@ public class Chick : MonoBehaviour
     Vector2 randomTarget = Vector2.zero;
 
     int eatedSeeds = 0;
-    public GameObject seeds;
-    public GameObject chicken;
+    public GameObject egg;
 
     float eatCooldown = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -41,7 +40,7 @@ public class Chick : MonoBehaviour
             return;
         }
 
-        if(!target)
+        if (!target)
         {
             target = GetTarget();
 
@@ -55,8 +54,6 @@ public class Chick : MonoBehaviour
         if (Vector2.Distance(target.transform.position, transform.position) < 0.01f)
         {
             // eat
-            Instantiate(seeds, target.transform.position, Quaternion.identity);
-            Destroy(target);
             eatCooldown = 10f;
             RefreshRandomTarget();
             eatedSeeds++;
@@ -64,8 +61,8 @@ public class Chick : MonoBehaviour
 
         if (eatedSeeds == NEEDED_SEEDS)
         {
-            Destroy(gameObject);
-            Instantiate(chicken, transform.position, Quaternion.identity);
+            eatedSeeds = 0;
+            Instantiate(egg, transform.position, Quaternion.identity);
             GameObject.Find("Global").GetComponent<GlobalLogic>().Puff(transform.position, 0.5f);
         }
     }
@@ -93,10 +90,9 @@ public class Chick : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y * 1f);
     }
 
-
     GameObject GetTarget()
     {
-        GameObject[] targets = GameObject.FindGameObjectsWithTag("Flower");
+        GameObject[] targets = GameObject.FindGameObjectsWithTag("Seeds");
 
         if (targets.Length == 0)
         {

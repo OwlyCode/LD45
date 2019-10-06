@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2422801497232094261}
   - component: {fileID: 2422801497232094260}
-  - component: {fileID: -475893410616116939}
   - component: {fileID: 1757568729359849530}
   - component: {fileID: 1515015701760858719}
   - component: {fileID: -757921548879319632}
+  - component: {fileID: -475893410616116939}
   m_Layer: 8
   m_Name: Chick
   m_TagString: Untagged
@@ -86,21 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-475893410616116939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2422801497232094263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af7794fb8a9a6ff48861a7f0ec76d1e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  depthOffset: 0
-  target: {fileID: 0}
-  parentBased: 0
 --- !u!114 &1757568729359849530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,3 +154,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seeds: {fileID: 93015141918379945, guid: 1e4cdd76fa626a1428e17ca45771e8f7, type: 3}
   chicken: {fileID: 749660669309782310, guid: af830bfc0f3bbfa46b38e385cceed38a, type: 3}
+--- !u!114 &-475893410616116939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2422801497232094263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7794fb8a9a6ff48861a7f0ec76d1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depthOffset: 0
+  target: {fileID: 0}
+  parentBased: 0
