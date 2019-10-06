@@ -11,5 +11,6 @@ public class Dirt : MonoBehaviour
         GameObject dirt = Instantiate(splashedDirt, transform.position, Quaternion.identity);
         dirt.GetComponent<DirtOnGround>().fadeIn = false;
         Destroy(gameObject);
+        GlobalLogic.splashDirtDiscovered = true;
     }
 }

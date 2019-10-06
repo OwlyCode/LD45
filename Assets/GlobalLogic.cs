@@ -6,6 +6,16 @@ public class GlobalLogic : MonoBehaviour
 {
     public GameObject puff;
     bool raining = false;
+    public static bool fireDiscovered = false;
+    public static bool rainDiscovered = false;
+    public static bool potteryDiscovered = false;
+    public static bool splashDirtDiscovered = false;
+    public static bool grassDiscovered = false;
+    public static bool flourDiscovered = false;
+    public static bool chickDiscovered = false;
+    public static bool budDiscovered = false;
+    public static bool chickenDiscovered = false;
+    public static bool eggDiscovered = false;
 
     public static List<GameObject> GetOverlapped(GameObject source, string layer)
     {

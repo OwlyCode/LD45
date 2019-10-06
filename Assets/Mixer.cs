@@ -74,16 +74,19 @@ public class Mixer : MonoBehaviour
     {
         if (typeA == "rock" && typeB == "rock")
         {
+            GlobalLogic.fireDiscovered = true;
             return "fire";
         }
 
         if (typeA == "snow" && typeB == "fire")
         {
+            GlobalLogic.rainDiscovered = true;
             return "rain";
         }
 
         if (typeA == "filled_pottery" && typeB == "fire")
         {
+            GlobalLogic.rainDiscovered = true;
             return "rain";
         }
 
@@ -94,16 +97,19 @@ public class Mixer : MonoBehaviour
 
         if (typeA == "dirt" && typeB == "fire")
         {
+            GlobalLogic.potteryDiscovered = true;
             return "pottery";
         }
 
         if (typeA == "dirt" && typeB == "filled_pottery")
         {
+            GlobalLogic.grassDiscovered = true;
             return "grass";
         }
 
         if (typeA == "seeds" && typeB == "rock")
         {
+            GlobalLogic.flourDiscovered = true;
             return "flour";
         }
 
@@ -114,6 +120,7 @@ public class Mixer : MonoBehaviour
 
         if (typeA == "pottery" && typeB == "egg")
         {
+            GlobalLogic.chickDiscovered = true;
             return "chick";
         }
 

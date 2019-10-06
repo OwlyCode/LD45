@@ -12,6 +12,7 @@ public class Bud : MonoBehaviour
 
     void Start()
     {
+        GlobalLogic.budDiscovered = true;
         growth = 0.1f;
         transform.localScale = Vector2.one * Mathf.Lerp(0f, 0.15f, growth);
     }

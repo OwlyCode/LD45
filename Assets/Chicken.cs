@@ -20,7 +20,7 @@ public class Chicken : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        GlobalLogic.chickenDiscovered = true;
     }
 
     // Update is called once per frame
@@ -63,6 +63,7 @@ public class Chicken : MonoBehaviour
         {
             eatedSeeds = 0;
             Instantiate(egg, transform.position, Quaternion.identity);
+            GlobalLogic.eggDiscovered = true;
             GameObject.Find("Global").GetComponent<GlobalLogic>().Puff(transform.position, 0.5f);
         }
     }
