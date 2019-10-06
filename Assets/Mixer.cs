@@ -11,6 +11,9 @@ public class Mixer : MonoBehaviour
     public GameObject dirt;
     public GameObject pottery;
     public GameObject grass;
+    public GameObject flour;
+    public GameObject cake;
+    public GameObject chick;
 
     void Update()
     {
@@ -99,6 +102,21 @@ public class Mixer : MonoBehaviour
             return "grass";
         }
 
+        if (typeA == "seeds" && typeB == "rock")
+        {
+            return "flour";
+        }
+
+        if (typeA == "flour" && typeB == "egg")
+        {
+            return "cake";
+        }
+
+        if (typeA == "pottery" && typeB == "egg")
+        {
+            return "chick";
+        }
+
         if (invert)
         {
             return GetRecipe(typeB, typeA, false);
@@ -132,6 +150,15 @@ public class Mixer : MonoBehaviour
                 break;
             case "rain":
                 GameObject.Find("Global").GetComponent<GlobalLogic>().Rain();
+                break;
+            case "flour":
+                Instantiate(flour, transform.position, Quaternion.identity);
+                break;
+            case "cake":
+                Instantiate(cake, transform.position, Quaternion.identity);
+                break;
+            case "chick":
+                Instantiate(chick, transform.position, Quaternion.identity);
                 break;
             default:
                 Debug.LogError("Unknwon recipe " + recipe);
