@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Cake : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class Cake : MonoBehaviour
     {
         if (other.gameObject.name == "HeroContainer")
         {
-            Debug.Log("Victory !");
+            SceneManager.LoadScene("Victory");
         }
     }
 }

@@ -85,7 +85,7 @@ public class Tutorial : MonoBehaviour
 
         if (!GlobalLogic.seedsDiscovered)
         {
-            SetText("Let's see what the chick is up to with the blue flowers.", TEXT_DELAY);
+            SetText("Have you noticed you can smash grass? Make some space for the flowers!", TEXT_DELAY);
             return;
         }
 
