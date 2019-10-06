@@ -128,6 +128,9 @@ public class Mixer : MonoBehaviour
             case "dirt":
                 Instantiate(dirt, transform.position, Quaternion.identity);
                 break;
+            case "rain":
+                GameObject.Find("Global").GetComponent<GlobalLogic>().Rain();
+                break;
             default:
                 Debug.LogError("Unknwon recipe " + recipe);
                 break;

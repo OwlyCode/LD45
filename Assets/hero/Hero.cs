@@ -8,6 +8,10 @@ public class Hero : MonoBehaviour
 
     GameObject carried = null;
 
+    public GameObject snow;
+
+    public GameObject dirt;
+
     void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow))
@@ -79,6 +83,27 @@ public class Hero : MonoBehaviour
             }
 
             i++;
+        }
+
+        i = 0;
+
+        while (i < colliders.Count && !found)
+        {
+            if (colliders[i].gameObject.layer == LayerMask.NameToLayer("Ground"))
+            {
+                Instantiate(dirt, transform.position, Quaternion.identity);
+                PickItem();
+
+                return;
+            }
+
+            i++;
+        }
+
+        if (!found)
+        {
+            Instantiate(snow, transform.position, Quaternion.identity);
+            PickItem();
         }
     }
 }

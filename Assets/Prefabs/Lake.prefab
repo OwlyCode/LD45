@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 96970122723077230}
   - component: {fileID: 5695562667356762127}
+  - component: {fileID: -5137393427103551189}
   m_Layer: 0
   m_Name: Lake
   m_TagString: Untagged
@@ -69,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 172377583
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2165821876479576607, guid: 1ad7f5a8e57fcfe4e82bf7b821e8cdbd,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -82,3 +83,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5137393427103551189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179976584225464622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12cb820c9bcd50a468340fb54d50164f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
