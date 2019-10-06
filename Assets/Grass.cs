@@ -16,6 +16,7 @@ public class Grass : MonoBehaviour
     public float growth = 0f;
 
     public GameObject grass;
+    public GameObject bud;
     public int generation = 0;
 
     void Start()
@@ -27,6 +28,13 @@ public class Grass : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.parent != null)
+        {
+            return;
+        }
+
+        transform.localScale = Vector2.one * Mathf.Lerp(0f, 0.15f, growth);
+
         if (GameObject.Find("Global").GetComponent<GlobalLogic>().IsRaining())
         {
             generation = 0;
@@ -53,7 +61,6 @@ public class Grass : MonoBehaviour
 
         growth = Mathf.Clamp(growth, - 0.1f, 1f);
 
-        transform.localScale = Vector2.one * Mathf.Lerp(0f, 0.15f, growth);
 
         if (growCount == 0 || generation >= MAX_GENERATION || growth < 1f)
         {
@@ -66,8 +73,14 @@ public class Grass : MonoBehaviour
         {
             Vector2 pos = transform.position + (Vector3)(Random.insideUnitCircle * GROW_RANGE);
 
-            GameObject child = Instantiate(grass, pos, Quaternion.identity);
-            child.GetComponent<Grass>().generation = generation + 1;
+            GameObject prefab = Random.Range(0f, 100f) > 85f ? bud : grass;
+
+            GameObject child = Instantiate(prefab, pos, Quaternion.identity);
+
+            if (prefab == grass)
+            {
+                child.GetComponent<Grass>().generation = generation + 1;
+            }
 
             cooldown = GROWING_TIME;
             growCount--;

@@ -142,4 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e33bf1a6a4bad459ea4eaa160fa506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  growth: 0
   grass: {fileID: 4404575440870741339}
+  bud: {fileID: 8349916478932165193, guid: fe814a4e9e895eb43836d69fcffb8856, type: 3}
+  generation: 0
