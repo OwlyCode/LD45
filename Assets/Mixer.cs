@@ -82,7 +82,7 @@ public class Mixer : MonoBehaviour
             return "rain";
         }
 
-        if (typeA == "rock" && typeB == "water")
+        if (typeA == "rock" && typeB == "filled_pottery")
         {
             return "dirt";
         }
@@ -92,7 +92,7 @@ public class Mixer : MonoBehaviour
             return "pottery";
         }
 
-        if (typeA == "dirt" && typeB == "water")
+        if (typeA == "dirt" && typeB == "filled_pottery")
         {
             return "grass";
         }
@@ -118,6 +118,15 @@ public class Mixer : MonoBehaviour
         {
             case "fire":
                 Instantiate(fire, transform.position, Quaternion.identity);
+                break;
+            case "pottery":
+                Instantiate(pottery, transform.position, Quaternion.identity);
+                break;
+            case "grass":
+                Instantiate(grass, transform.position, Quaternion.identity);
+                break;
+            case "dirt":
+                Instantiate(dirt, transform.position, Quaternion.identity);
                 break;
             default:
                 Debug.LogError("Unknwon recipe " + recipe);

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 436044645497503423}
   - component: {fileID: 8158518006359657462}
   - component: {fileID: 7653270713352835028}
+  - component: {fileID: 3792727611710124156}
   m_Layer: 8
   m_Name: Fire
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436044645497503422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.298, y: -2.3413, z: 0}
+  m_LocalPosition: {x: -1.298, y: -2.3413, z: -2.3413}
   m_LocalScale: {x: 0.19030955, y: 0.19030955, z: 0.19030955}
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,3 +113,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: fire
+--- !u!70 &3792727611710124156
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436044645497503422}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.74, y: 3.0400002}
+  m_Direction: 0
