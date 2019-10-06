@@ -27,7 +27,7 @@ public class RockDropper : MonoBehaviour
         {
             Vector2 rockTarget = Random.insideUnitCircle * 4;
 
-            while (Vector2.Distance(rockTarget, transform.position) < 1f)
+            while (Vector2.Distance(rockTarget, transform.position) < 2f)
             {
                 rockTarget = Random.insideUnitCircle * 4;
             }

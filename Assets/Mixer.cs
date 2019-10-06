@@ -41,19 +41,21 @@ public class Mixer : MonoBehaviour
             i++;
         }
 
-        if (ingredients.Count == 2)
+        if (ingredients.Count != 2)
         {
-            string recipe = GetRecipe(ingredients);
+            return;
+        }
 
-            if (recipe != "nothing")
-            {
-                ingredients[0].GetComponent<DraggableItem>().Shake();
-                ingredients[0].layer = LayerMask.NameToLayer("Reactant");
-                ingredients[1].GetComponent<DraggableItem>().Shake();
-                ingredients[1].layer = LayerMask.NameToLayer("Reactant");
-                processing = true;
-                StartCoroutine(Process(recipe));
-            }
+        string recipe = GetRecipe(ingredients);
+
+        if (recipe != "nothing")
+        {
+            ingredients[0].GetComponent<DraggableItem>().Shake();
+            ingredients[0].layer = LayerMask.NameToLayer("Reactant");
+            ingredients[1].GetComponent<DraggableItem>().Shake();
+            ingredients[1].layer = LayerMask.NameToLayer("Reactant");
+            processing = true;
+            StartCoroutine(Process(recipe));
         }
     }
 

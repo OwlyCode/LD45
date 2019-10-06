@@ -6,7 +6,7 @@ public class Hero : MonoBehaviour
 {
     float speed = 2f;
 
-    float jumpDuration = 0.4f;
+    float jumpDuration = 0.25f;
 
     GameObject carried = null;
 
@@ -38,7 +38,7 @@ public class Hero : MonoBehaviour
 
             GameObject.Find("Spawn").GetComponent<RockDropper>().Jump();
 
-            StartCoroutine(DoJump(GlobalLogic.GetOverlapped(gameObject, "Droppable")));
+            StartCoroutine(DoJump());
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
@@ -47,17 +47,16 @@ public class Hero : MonoBehaviour
                 DropItem();
             } else
             {
-
                 PickItem();
             }
         }
     }
 
-    IEnumerator DoJump(List<GameObject> jumpedOns)
+    IEnumerator DoJump()
     {
         yield return new WaitForSeconds(jumpDuration);
 
-        foreach (GameObject jumpedOn in jumpedOns)
+        foreach (GameObject jumpedOn in GlobalLogic.GetOverlapped(gameObject, "Droppable"))
         {
             jumpedOn.SendMessage("OnJumpedOn");
         }
@@ -85,7 +84,7 @@ public class Hero : MonoBehaviour
 
         while (i < colliders.Count && !found)
         {
-            if (colliders[i].gameObject.layer == LayerMask.NameToLayer("Droppable"))
+            if (colliders[i].gameObject.layer == LayerMask.NameToLayer("Droppable") && colliders[i].gameObject.GetComponent<DraggableItem>().type != "fire")
             {
                 found = true;
                 carried = colliders[i].gameObject;

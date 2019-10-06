@@ -16,6 +16,11 @@ public class DraggableItem : MonoBehaviour
         this.puff = puff;
     }
 
+    void OnJumpedOn()
+    {
+        // noop
+    }
+
     // Update is called once per frame
     void Update()
     {
