@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Grass : MonoBehaviour
 {
-    const float GROWING_TIME = 1f;
+    const float GROWING_TIME = 2.5f;
     const float GROW_RANGE = 1f;
     const int GROW_COUNT = 1;
     const int MAX_GENERATION = 1;
-    const float GROWTH_SPEED = 0.2f;
+    const float GROWTH_SPEED = 0.1f;
 
     float cooldown = GROWING_TIME;
-    int growCount = GROW_COUNT;
+    int growCount = 0;
 
     public float growth = 0f;
 
@@ -30,7 +30,7 @@ public class Grass : MonoBehaviour
         if (GameObject.Find("Global").GetComponent<GlobalLogic>().IsRaining())
         {
             generation = 0;
-            growCount = 0;
+            growCount = GROW_COUNT;
         }
 
         if (!GlobalLogic.Overlaps(gameObject, "Ground"))
