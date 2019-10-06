@@ -23,7 +23,7 @@ public class RockDropper : MonoBehaviour
 
     public void Jump()
     {
-        if (insideSpawn)
+        if (GlobalLogic.Overlaps(gameObject, "Hero"))
         {
             Vector2 rockTarget = Random.insideUnitCircle * 4;
 

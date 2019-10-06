@@ -34,7 +34,7 @@ public class Tutorial : MonoBehaviour
                 }
                 break;
             case 2:
-                SetText("Well I see you got this. Can you make a cake by combining items ? You can ask for help by pressing H.", TEXT_DELAY);
+                SetText("Remember you can only merge 2 items. If it works they will shake. You can ask for help by pressing H.", TEXT_DELAY);
                 stage++;
                 break;
         }

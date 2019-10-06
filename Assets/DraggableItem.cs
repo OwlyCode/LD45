@@ -27,6 +27,7 @@ public class DraggableItem : MonoBehaviour
         if (!dropped)
         {
             transform.position = Vector2.MoveTowards(transform.position, target, 15f * Time.deltaTime);
+            GetComponent<Collider2D>().enabled = false;
         }
 
         if (transform.position == target)
@@ -37,6 +38,7 @@ public class DraggableItem : MonoBehaviour
             }
 
             dropped = true;
+            GetComponent<Collider2D>().enabled = true;
         }
     }
 

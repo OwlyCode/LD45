@@ -521,7 +521,8 @@ GameObject:
   - component: {fileID: 427125647}
   - component: {fileID: 427125648}
   - component: {fileID: 427125649}
-  m_Layer: 0
+  - component: {fileID: 427125650}
+  m_Layer: 12
   m_Name: HeroContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +594,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.016370773, y: 0.027711928}
@@ -644,6 +645,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snow: {fileID: 225679911609602206, guid: 6621dc186149d0a4085a30ce1f00e247, type: 3}
   dirt: {fileID: 4217100603782322044, guid: c9d7f8d5901b5fd4baf40cd8dff6ea77, type: 3}
+--- !u!61 &427125650
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427125643}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.016370773, y: 0.027711928}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25685024, y: 0.15134668}
+  m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

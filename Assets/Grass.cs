@@ -69,13 +69,14 @@ public class Grass : MonoBehaviour
 
         cooldown -= Time.deltaTime;
 
-        if (cooldown < 0)
+        if (cooldown < 0 && GlobalLogic.grassCount < 80f)
         {
             Vector2 pos = transform.position + (Vector3)(Random.insideUnitCircle * GROW_RANGE);
 
             GameObject prefab = Random.Range(0f, 100f) > 85f ? bud : grass;
 
             GameObject child = Instantiate(prefab, pos, Quaternion.identity);
+            GlobalLogic.grassCount++;
 
             if (prefab == grass)
             {
@@ -90,5 +91,6 @@ public class Grass : MonoBehaviour
     void OnJumpedOn()
     {
         Destroy(gameObject);
+        GlobalLogic.grassCount--;
     }
 }

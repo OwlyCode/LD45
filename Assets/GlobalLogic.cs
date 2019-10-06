@@ -20,6 +20,8 @@ public class GlobalLogic : MonoBehaviour
     public static bool seedsDiscovered = false;
     public static bool cakeDiscovered = false;
 
+    public static int grassCount = 0;
+
     public static List<GameObject> GetOverlapped(GameObject source, string layer)
     {
         List<GameObject> items = new List<GameObject>();
