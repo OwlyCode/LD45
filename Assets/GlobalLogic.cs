@@ -7,6 +7,26 @@ public class GlobalLogic : MonoBehaviour
     public GameObject puff;
     bool raining = false;
 
+    public static List<GameObject> GetOverlapped(GameObject source, string layer)
+    {
+        List<GameObject> items = new List<GameObject>();
+
+        List<Collider2D> colliders = new List<Collider2D>();
+        ContactFilter2D contactFilter = new ContactFilter2D();
+
+        source.GetComponent<Collider2D>().OverlapCollider(contactFilter, colliders);
+
+        foreach(Collider2D col in colliders)
+        {
+            if (col.gameObject.layer == LayerMask.NameToLayer(layer))
+            {
+                items.Add(col.gameObject);
+            }
+        }
+
+        return items;
+    }
+
     public static bool Overlaps(GameObject source, string layer)
     {
         List<Collider2D> colliders = new List<Collider2D>();

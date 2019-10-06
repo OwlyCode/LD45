@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -7891181894742191510}
   - component: {fileID: 3799513319747112017}
   - component: {fileID: -397368822928550214}
+  - component: {fileID: 4440967095770043724}
   m_Layer: 8
   m_Name: Dirt
   m_TagString: Untagged
@@ -129,3 +130,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.8200002, y: 1.99}
   m_Direction: 0
+--- !u!114 &4440967095770043724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217100603782322044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44808b9912f172c46a788d1f30bd68eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splashedDirt: {fileID: 1818557531262473377, guid: 5d0c6418e14a3f64bba582286325038e,
+    type: 3}

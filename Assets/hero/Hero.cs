@@ -6,6 +6,8 @@ public class Hero : MonoBehaviour
 {
     float speed = 2f;
 
+    float jumpDuration = 0.4f;
+
     GameObject carried = null;
 
     public GameObject snow;
@@ -35,6 +37,8 @@ public class Hero : MonoBehaviour
             transform.Find("hero").gameObject.GetComponent<Animator>().SetTrigger("jump");
 
             GameObject.Find("Spawn").GetComponent<RockDropper>().Jump();
+
+            StartCoroutine(DoJump(GlobalLogic.GetOverlapped(gameObject, "Droppable")));
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
@@ -46,6 +50,16 @@ public class Hero : MonoBehaviour
 
                 PickItem();
             }
+        }
+    }
+
+    IEnumerator DoJump(List<GameObject> jumpedOns)
+    {
+        yield return new WaitForSeconds(jumpDuration);
+
+        foreach (GameObject jumpedOn in jumpedOns)
+        {
+            jumpedOn.SendMessage("OnJumpedOn");
         }
     }
 
