@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6047649829889206325}
   - component: {fileID: 9002162014181053364}
   - component: {fileID: 4372015076483264988}
+  - component: {fileID: -3114076350542622702}
   m_Layer: 8
   m_Name: Chicken
   m_TagString: Untagged
@@ -184,3 +185,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   egg: {fileID: 6696526963256505392, guid: d7280128af9c5c4488aef2327252eb67, type: 3}
+--- !u!95 &-3114076350542622702
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749660669309782310}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 406cc8b040c89754e96ccf0ce6612052, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

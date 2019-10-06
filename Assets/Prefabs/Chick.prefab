@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1515015701760858719}
   - component: {fileID: -757921548879319632}
   - component: {fileID: -475893410616116939}
+  - component: {fileID: 4187196124042469772}
   m_Layer: 8
   m_Name: Chick
   m_TagString: Untagged
@@ -169,3 +170,22 @@ MonoBehaviour:
   depthOffset: 0
   target: {fileID: 0}
   parentBased: 0
+--- !u!95 &4187196124042469772
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2422801497232094263}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 10ed797ab79f0d044b78c24d9d2d845b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
