@@ -55,6 +55,7 @@ public class Chick : MonoBehaviour
         if (Vector2.Distance(target.transform.position, transform.position) < 0.01f)
         {
             // eat
+            GlobalLogic.seedsDiscovered = true;
             Instantiate(seeds, target.transform.position, Quaternion.identity);
             Destroy(target);
             eatCooldown = 10f;

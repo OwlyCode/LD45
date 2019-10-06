@@ -86,4 +86,9 @@ public class Grass : MonoBehaviour
             growCount--;
         }
     }
+
+    void OnJumpedOn()
+    {
+        Destroy(gameObject);
+    }
 }

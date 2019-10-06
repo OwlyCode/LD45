@@ -19,28 +19,29 @@ public class Hero : MonoBehaviour
         GetComponent<Animator>().SetBool("moving", false);
         GetComponent<Animator>().SetBool("grabbing", carried != null);
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) && GlobalLogic.jumpDiscovered)
         {
             transform.position = transform.position + Vector3.up * speed * Time.deltaTime;
             GetComponent<Animator>().SetBool("moving", true);
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) && GlobalLogic.jumpDiscovered)
         {
             transform.position = transform.position + Vector3.down * speed * Time.deltaTime;
             GetComponent<Animator>().SetBool("moving", true);
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) && GlobalLogic.jumpDiscovered)
         {
             transform.position = transform.position + Vector3.left * speed * Time.deltaTime;
             GetComponent<Animator>().SetBool("moving", true);
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) && GlobalLogic.jumpDiscovered)
         {
             transform.position = transform.position + Vector3.right * speed * Time.deltaTime;
             GetComponent<Animator>().SetBool("moving", true);
         }
         if (Input.GetKeyDown(KeyCode.Space) && !carried)
         {
+            GlobalLogic.jumpDiscovered = true;
             GetComponent<Animator>().SetTrigger("jump");
 
             GameObject.Find("Spawn").GetComponent<RockDropper>().Jump();

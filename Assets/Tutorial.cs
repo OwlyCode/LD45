@@ -83,6 +83,12 @@ public class Tutorial : MonoBehaviour
             return;
         }
 
+        if (!GlobalLogic.seedsDiscovered)
+        {
+            SetText("Let's see what the chick is up to with the blue flowers.", TEXT_DELAY);
+            return;
+        }
+
         if (!GlobalLogic.flourDiscovered)
         {
             SetText("Those seeds over there can't be used for the cake without being refined.", TEXT_DELAY);
@@ -97,7 +103,19 @@ public class Tutorial : MonoBehaviour
 
         if (!GlobalLogic.eggDiscovered)
         {
-            SetText("The chicken will need to eat from some seeds to lay an egg.", TEXT_DELAY);
+            SetText("Chicken fact n°1445: there are plenty of good nutriments in seeds.", TEXT_DELAY);
+            return;
+        }
+
+        if (!GlobalLogic.cakeDiscovered)
+        {
+            SetText("Carry on! Now there's everything you need to make the cake.", TEXT_DELAY);
+            return;
+        }
+
+        if (GlobalLogic.cakeDiscovered)
+        {
+            SetText("Go get your cake!", TEXT_DELAY);
             return;
         }
     }
@@ -107,8 +125,54 @@ public class Tutorial : MonoBehaviour
         return GameObject.Find("Global").GetComponent<GlobalLogic>();
     }
 
+    string currentMessage;
+
     void SetText(string text, float fadeDelay = 0f)
     {
-        GetComponent<Text>().text = text;
+        if(text == "")
+        {
+            transform.parent.gameObject.GetComponent<CanvasRenderer>().SetAlpha(0);
+        } else
+        {
+            transform.parent.gameObject.GetComponent<CanvasRenderer>().SetAlpha(1);
+        }
+
+        if (text == currentMessage)
+        {
+            return;
+        }
+
+        currentMessage = text;
+
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence());
+
+        if (fadeDelay > 0f)
+        {
+            StartCoroutine(AutoHide(fadeDelay));
+        }
+    }
+    IEnumerator AutoHide(float fadeDelay)
+    {
+        yield return new WaitForSeconds(fadeDelay);
+
+        SetText("");
+    }
+
+    IEnumerator TypeSentence()
+    {
+        GetComponent<Text>().text = "";
+        int i = 0;
+
+        foreach (char letter in currentMessage.ToCharArray())
+        {
+            GetComponent<Text>().text += letter;
+            if (i % 3 == 0)
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            i++;
+        }
     }
 }
