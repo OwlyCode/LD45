@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 225679911609602204}
   - component: {fileID: 225679911609602205}
   - component: {fileID: 6871187445886258679}
+  - component: {fileID: -4307452513956046132}
+  - component: {fileID: 3251078186337340393}
   m_Layer: 8
   m_Name: GrabbedSnow
   m_TagString: Untagged
@@ -95,6 +97,34 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.016227365, y: 0.97366875}
+  m_Offset: {x: -0.016227365, y: 0.47}
   serializedVersion: 2
-  m_Radius: 1.1550001
+  m_Radius: 1.15
+--- !u!114 &-4307452513956046132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225679911609602206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fcb26410a06264081f7ef7f60e12aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: snow
+--- !u!114 &3251078186337340393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225679911609602206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7794fb8a9a6ff48861a7f0ec76d1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depthOffset: 0
+  target: {fileID: 0}
+  parentBased: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DraggableItem : MonoBehaviour
 {
+    public string type;
     Vector3 target;
     bool dropped = true;
     bool puff = false;
