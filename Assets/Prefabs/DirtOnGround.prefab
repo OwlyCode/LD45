@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4391615228185353711}
   - component: {fileID: 4427032430110053978}
+  - component: {fileID: -7398066912609530096}
   m_Layer: 0
   m_Name: DirtOnGround
   m_TagString: Untagged
@@ -67,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 172377583
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7582964038499862110, guid: 1ad7f5a8e57fcfe4e82bf7b821e8cdbd,
     type: 3}
@@ -82,3 +83,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7398066912609530096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818557531262473377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cfb22f01420905499e0dcb93d934e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
